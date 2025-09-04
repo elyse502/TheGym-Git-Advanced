@@ -71,6 +71,54 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ 
 elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 ```
 
+> 2. Editing Commit History:
+
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log
+commit 28b142da24ba2fcaec82f8d6973375f9f347c280 (HEAD -> main, origin/main)
+Author: elyse502 <elyseniyibizi502@gmail.com>
+Date:   Thu Sep 4 16:07:40 2025 +0300
+
+    Add challenge 1. Missing File Fix
+
+commit b01b46dffe18ae32ba2c373c4846240b88e80bb0
+Author: elyse502 <elyseniyibizi502@gmail.com>
+Date:   Thu Sep 4 15:48:28 2025 +0300
+
+    chore: Create third and fourth files
+
+commit 37dde504b520764e2219c7de687f5e1fe7e33dac
+Author: elyse502 <elyseniyibizi502@gmail.com>
+Date:   Thu Sep 4 15:48:20 2025 +0300
+
+    chore: Create another file
+
+commit fe51ebe770362b12fc398a8a1b0470e46b75a559
+Author: elyse502 <elyseniyibizi502@gmail.com>
+Date:   Thu Sep 4 15:48:13 2025 +0300
+
+    chore: Create initial file
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+28b142d (HEAD -> main, origin/main) Add challenge 1. Missing File Fix
+b01b46d chore: Create third and fourth files
+37dde50 chore: Create another file
+fe51ebe chore: Create initial file
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git rebase -i HEAD~3
+[detached HEAD ec77dd8] chore: Create second file
+ Date: Thu Sep 4 15:48:20 2025 +0300
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+c110252 (HEAD -> main) Add challenge 1. Missing File Fix
+187d282 chore: Create third and fourth files
+ec77dd8 chore: Create second file
+fe51ebe chore: Create initial file
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+
+
 
 
 
