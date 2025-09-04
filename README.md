@@ -71,6 +71,8 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ 
 elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 ```
 
+<br />
+
 > 2. Editing Commit History:
 
 ```console
@@ -116,6 +118,46 @@ ec77dd8 chore: Create second file
 fe51ebe chore: Create initial file
 elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 ```
+
+<br />
+
+> 3. Keeping History Tidy - Squashing Commits:
+
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+bbc473a (HEAD -> main, origin/main) Add challenge 2. Editing Commit History
+c110252 Add challenge 1. Missing File Fix
+187d282 chore: Create third and fourth files
+ec77dd8 chore: Create second file
+fe51ebe chore: Create initial file
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline | wc -l
+5
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git rebase -i --root
+[detached HEAD 2f91f5b] chore: Add initial test files
+ Date: Thu Sep 4 15:48:13 2025 +0300
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.md
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+0cb5d63 (HEAD -> main) Add challenge 2. Editing Commit History
+c5b1637 Add challenge 1. Missing File Fix
+556dfc2 chore: Create third and fourth files
+2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git push --force-with-lease origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 2.06 KiB | 421.00 KiB/s, done.
+Total 11 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/elyse502/TheGym-Git-Advanced
+ + bbc473a...0cb5d63 main -> main (forced update)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
 
 
 
