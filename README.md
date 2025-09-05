@@ -268,7 +268,53 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 6. Dropping a Commit:
 
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ touch unwanted.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ echo "This is an unwanted file" > unwanted.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add unwanted.txt && git commit -m "Unwanted commit"
+[main 1c823f5] Unwanted commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 unwanted.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+1c823f5 (HEAD -> main) Unwanted commit
+716fced (origin/main) feat: Add challenge 5. Advanced Squashing
+0865d15 feat: Add challenge 4. Splitting a Commit
+9c13256 Add challenge 3. Keeping History Tidy - Squashing Commits
+2c2921e Add challenge 2. Editing Commit History
+1031a12 Add challenge 1. Missing File Fix
+758a096 chore: Create third and fourth files
+2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/main.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+716fced (HEAD -> main, origin/main) feat: Add challenge 5. Advanced Squashing
+0865d15 feat: Add challenge 4. Splitting a Commit
+9c13256 Add challenge 3. Keeping History Tidy - Squashing Commits
+2c2921e Add challenge 2. Editing Commit History
+1031a12 Add challenge 1. Missing File Fix
+758a096 chore: Create third and fourth files
+2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls -la
+total 24
+drwxr-xr-x 3 elysee elysee  4096 Sep  5 13:00 .
+drwxr-xr-x 3 elysee elysee  4096 Sep  4 15:46 ..
+drwxr-xr-x 8 elysee elysee  4096 Sep  5 13:00 .git
+-rw-r--r-- 1 elysee elysee 12093 Sep  5 12:58 README.md
+-rw-r--r-- 1 elysee elysee     0 Sep  4 17:08 test1.md
+-rw-r--r-- 1 elysee elysee     0 Sep  4 17:08 test2.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 12:30 test3.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 12:43 test4.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
 
 
 
