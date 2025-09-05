@@ -442,6 +442,75 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 9. Visualizing Commit History (Bonus):
+
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline --graph --all
+* 446e7dd (HEAD -> main, origin/main) feat: Add challenge 8. Cherry-Picking Commits
+* bd4dd58 Implemented test 5
+| * e2c0122 (ft/branch) Implemented test 5
+|/
+* 7bcf02e feat: Add challenge 7. Reordering Commits
+* f4358c8 feat: Add challenge 6. Dropping a Commit
+* 76690c3 chore: Create third and fourth files
+* 098088e feat: Add challenge 5. Advanced Squashing
+* ad46e33 feat: Add challenge 4. Splitting a Commit
+* 9d562a7 Add challenge 3. Keeping History Tidy - Squashing Commits
+* 7e42297 Add challenge 2. Editing Commit History
+* 03fe620 Add challenge 1. Missing File Fix
+* 2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --graph --all --decorate --oneline
+* 446e7dd (HEAD -> main, origin/main) feat: Add challenge 8. Cherry-Picking Commits
+* bd4dd58 Implemented test 5
+| * e2c0122 (ft/branch) Implemented test 5
+|/
+* 7bcf02e feat: Add challenge 7. Reordering Commits
+* f4358c8 feat: Add challenge 6. Dropping a Commit
+* 76690c3 chore: Create third and fourth files
+* 098088e feat: Add challenge 5. Advanced Squashing
+* ad46e33 feat: Add challenge 4. Splitting a Commit
+* 9d562a7 Add challenge 3. Keeping History Tidy - Squashing Commits
+* 7e42297 Add challenge 2. Editing Commit History
+* 03fe620 Add challenge 1. Missing File Fix
+* 2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --graph --all --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+* 446e7dd - (HEAD -> main, origin/main) feat: Add challenge 8. Cherry-Picking Commits (5 minutes ago) <elyse502>
+* bd4dd58 - Implemented test 5 (9 minutes ago) <elyse502>
+| * e2c0122 - (ft/branch) Implemented test 5 (10 minutes ago) <elyse502>
+|/
+* 7bcf02e - feat: Add challenge 7. Reordering Commits (19 minutes ago) <elyse502>
+* f4358c8 - feat: Add challenge 6. Dropping a Commit (22 minutes ago) <elyse502>
+* 76690c3 - chore: Create third and fourth files (22 minutes ago) <elyse502>
+* 098088e - feat: Add challenge 5. Advanced Squashing (22 minutes ago) <elyse502>
+* ad46e33 - feat: Add challenge 4. Splitting a Commit (22 minutes ago) <elyse502>
+* 9d562a7 - Add challenge 3. Keeping History Tidy - Squashing Commits (22 minutes ago) <elyse502>
+* 7e42297 - Add challenge 2. Editing Commit History (22 minutes ago) <elyse502>
+* 03fe620 - Add challenge 1. Missing File Fix (22 minutes ago) <elyse502>
+* 2f91f5b - chore: Add initial test files (21 hours ago) <elyse502>
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git show-branch --all
+! [ft/branch] Implemented test 5
+ * [main] feat: Add challenge 8. Cherry-Picking Commits
+  ! [origin/main] feat: Add challenge 8. Cherry-Picking Commits
+---
+ *+ [main] feat: Add challenge 8. Cherry-Picking Commits
+ *+ [main^] Implemented test 5
++   [ft/branch] Implemented test 5
++*+ [main~2] feat: Add challenge 7. Reordering Commits
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline -10 --graph
+* 446e7dd (HEAD -> main, origin/main) feat: Add challenge 8. Cherry-Picking Commits
+* bd4dd58 Implemented test 5
+* 7bcf02e feat: Add challenge 7. Reordering Commits
+* f4358c8 feat: Add challenge 6. Dropping a Commit
+* 76690c3 chore: Create third and fourth files
+* 098088e feat: Add challenge 5. Advanced Squashing
+* ad46e33 feat: Add challenge 4. Splitting a Commit
+* 9d562a7 Add challenge 3. Keeping History Tidy - Squashing Commits
+* 7e42297 Add challenge 2. Editing Commit History
+* 03fe620 Add challenge 1. Missing File Fix
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
 
 
 
