@@ -354,6 +354,93 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 8. Cherry-Picking Commits:
+
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+* main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git checkout -b ft/branch
+Switched to a new branch 'ft/branch'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ touch test5.md && echo "This is test file 5" > test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch ft/branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test5.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat test5.md
+This is test file 5
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add test5.md && git commit -m "Implemented test 5"
+[ft/branch e2c0122] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline --all
+e2c0122 (ft/branch) Implemented test 5
+7bcf02e (HEAD -> main, origin/main) feat: Add challenge 7. Reordering Commits
+f4358c8 feat: Add challenge 6. Dropping a Commit
+76690c3 chore: Create third and fourth files
+098088e feat: Add challenge 5. Advanced Squashing
+ad46e33 feat: Add challenge 4. Splitting a Commit
+9d562a7 Add challenge 3. Keeping History Tidy - Squashing Commits
+7e42297 Add challenge 2. Editing Commit History
+03fe620 Add challenge 1. Missing File Fix
+2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git cherry-pick e2c0122
+[main bd4dd58] Implemented test 5
+ Date: Fri Sep 5 13:35:20 2025 +0300
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+bd4dd58 (HEAD -> main) Implemented test 5
+7bcf02e (origin/main) feat: Add challenge 7. Reordering Commits
+f4358c8 feat: Add challenge 6. Dropping a Commit
+76690c3 chore: Create third and fourth files
+098088e feat: Add challenge 5. Advanced Squashing
+ad46e33 feat: Add challenge 4. Splitting a Commit
+9d562a7 Add challenge 3. Keeping History Tidy - Squashing Commits
+7e42297 Add challenge 2. Editing Commit History
+03fe620 Add challenge 1. Missing File Fix
+2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls -la
+total 32
+drwxr-xr-x 3 elysee elysee  4096 Sep  5 13:36 .
+drwxr-xr-x 3 elysee elysee  4096 Sep  4 15:46 ..
+drwxr-xr-x 8 elysee elysee  4096 Sep  5 13:36 .git
+-rw-r--r-- 1 elysee elysee 16323 Sep  5 13:26 README.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test1.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test2.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test3.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test4.md
+-rw-r--r-- 1 elysee elysee    20 Sep  5 13:36 test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git push --force-with-lease origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 73.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/elyse502/TheGym-Git-Advanced
+   7bcf02e..bd4dd58  main -> main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
 
 
 
