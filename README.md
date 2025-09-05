@@ -159,6 +159,76 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 4. Splitting a Commit:
+
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+82499c5 (HEAD -> main, origin/main) Add challenge 3. Keeping History Tidy - Squashing Commits
+0cb5d63 Add challenge 2. Editing Commit History
+c5b1637 Add challenge 1. Missing File Fix
+556dfc2 chore: Create third and fourth files
+2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git rebase -i HEAD~4
+Stopped at 556dfc2...  chore: Create third and fourth files
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git reset HEAD~
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+interactive rebase in progress; onto 2f91f5b
+Last command done (1 command done):
+   edit 556dfc2 chore: Create third and fourth files
+Next commands to do (3 remaining commands):
+   pick c5b1637 Add challenge 1. Missing File Fix
+   pick 0cb5d63 Add challenge 2. Editing Commit History
+  (use "git rebase --edit-todo" to view and edit)
+You are currently editing a commit while rebasing branch 'main' on '2f91f5b'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test3.md
+        test4.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add test3.md; git commit -m "chore: Create third file"
+[detached HEAD 5d9f969] chore: Create third file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add test4.md; git commit -m "chore: Create fourth file"
+[detached HEAD 41cc2a7] chore: Create fourth file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test4.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git rebase --continue
+Successfully rebased and updated refs/heads/main.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+d413b1f (HEAD -> main) Add challenge 3. Keeping History Tidy - Squashing Commits
+05b9c4c Add challenge 2. Editing Commit History
+9d312e8 Add challenge 1. Missing File Fix
+41cc2a7 chore: Create fourth file
+5d9f969 chore: Create third file
+2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git push --force-with-lease origin main
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 2.66 KiB | 124.00 KiB/s, done.
+Total 13 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/elyse502/TheGym-Git-Advanced
+ + 82499c5...d413b1f main -> main (forced update)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
+
+
 
 
 
