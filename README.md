@@ -316,6 +316,45 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 7. Reordering Commits:
+
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+d7a8859 (HEAD -> main, origin/main) feat: Add challenge 6. Dropping a Commit
+716fced feat: Add challenge 5. Advanced Squashing
+0865d15 feat: Add challenge 4. Splitting a Commit
+9c13256 Add challenge 3. Keeping History Tidy - Squashing Commits
+2c2921e Add challenge 2. Editing Commit History
+1031a12 Add challenge 1. Missing File Fix
+758a096 chore: Create third and fourth files
+2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git rebase -i --root
+Successfully rebased and updated refs/heads/main.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline
+f4358c8 (HEAD -> main) feat: Add challenge 6. Dropping a Commit
+76690c3 chore: Create third and fourth files
+098088e feat: Add challenge 5. Advanced Squashing
+ad46e33 feat: Add challenge 4. Splitting a Commit
+9d562a7 Add challenge 3. Keeping History Tidy - Squashing Commits
+7e42297 Add challenge 2. Editing Commit History
+03fe620 Add challenge 1. Missing File Fix
+2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git push --force-with-lease origin main
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (20/20), 4.24 KiB | 206.00 KiB/s, done.
+Total 20 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/elyse502/TheGym-Git-Advanced
+ + d7a8859...f4358c8 main -> main (forced update)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
+
+
 
 
 
