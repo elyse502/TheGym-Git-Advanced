@@ -765,6 +765,42 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 3. Switching Back and Making More Changes:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+  ft/branch
+* ft/new-feature
+  main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls
+README.md  part-1.md  test1.md  test2.md  test3.md  test4.md  test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ echo "This is the introductory content for the project." > readme.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls
+README.md  part-1.md  readme.txt  test1.md  test2.md  test3.md  test4.md  test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add readme.txt && git commit -m "Updated project readme"
+[main c535432] Updated project readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log -1
+commit c53543286f043e108a779cd98ad867cfc249b697 (HEAD -> main)
+Author: elyse502 <elyseniyibizi502@gmail.com>
+Date:   Mon Sep 8 11:24:38 2025 +0300
+
+    Updated project readme
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
+
+
+
+
+
+
+
+
 
 
 
