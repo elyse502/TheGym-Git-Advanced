@@ -736,4 +736,40 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 2. Working on the Feature Branch:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch ft/new-feature
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+  ft/branch
+* ft/new-feature
+  main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ echo "This is the core functionality for the new feature." > feature.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls
+README.md  feature.txt  part-1.md  test1.md  test2.md  test3.md  test4.md  test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat feature.txt
+This is the core functionality for the new feature.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add feature.txt && git commit -m "Implemented core functionality for new feature"
+[ft/new-feature 9d3ddce] Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log -1
+commit 9d3ddcea58532d0534bd748d8af59716c88d38f2 (HEAD -> ft/new-feature)
+Author: elyse502 <elyseniyibizi502@gmail.com>
+Date:   Mon Sep 8 11:05:57 2025 +0300
+
+    Implemented core functionality for new feature
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
+
+
+
+
+
+
+
+
 
