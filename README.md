@@ -833,6 +833,31 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 6. Creating a Branch from a Commit:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline -3
+3ad0642 (HEAD -> main, origin/main)  feat: Add challenge 5. Branch Deletion
+86e383b Merge branch 'ft/new-feature'
+fa0cea7  feat: Add challenge 4. Local vs. Remote Branches
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git checkout -b ft/new-branch-from-commit HEAD~2
+Switched to a new branch 'ft/new-branch-from-commit'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline -3
+86e383b (HEAD -> ft/new-branch-from-commit) Merge branch 'ft/new-feature'
+fa0cea7  feat: Add challenge 4. Local vs. Remote Branches
+2f4acc7  feat: Add challenge 3. Switching Back and Making More Changes
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+  ft/branch
+* ft/new-branch-from-commit
+  main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch --all
+  ft/branch
+* ft/new-branch-from-commit
+  main
+  remotes/origin/main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
 
 
 
