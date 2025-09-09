@@ -881,7 +881,53 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 8. Branch Rebasing:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch -vv
+  ft/branch                 e2c0122 Implemented test 5
+  ft/new-branch-from-commit 86e383b Merge branch 'ft/new-feature'
+* main                      3297f55 [origin/main]  feat: Add challenge 7. Branch Merging
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git pull origin main
+From https://github.com/elyse502/TheGym-Git-Advanced
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline --graph --all
+* 3297f55 (HEAD -> ft/new-branch-from-commit, origin/main, main)  feat: Add challenge 7. Branch Merging
+* cf8ed39  feat: Add challenge 6. Creating a Branch from a Commit
+* 3ad0642  feat: Add challenge 5. Branch Deletion
+*   86e383b Merge branch 'ft/new-feature'
+|\
+| * 9d3ddce Implemented core functionality for new feature
+* | fa0cea7  feat: Add challenge 4. Local vs. Remote Branches
+* | 2f4acc7  feat: Add challenge 3. Switching Back and Making More Changes
+* | c535432 Updated project readme
+* | 6a3226e  feat: Add challenge 2. Working on the Feature Branch
+* | d4b2a84  feat: Add challenge 1. Feature Branch Creation
+|/
+* 0144dc9 docs: document part 1 git history refinement challenges
+* a5876c3 feat: Add challenge 10. Understanding Reflogs (Bonus)
+* 5b9864e feat: Add challenge 9. Visualizing Commit History (Bonus)
+* 446e7dd feat: Add challenge 8. Cherry-Picking Commits
+* bd4dd58 Implemented test 5
+| * e2c0122 (ft/branch) Implemented test 5
+|/
+* 7bcf02e feat: Add challenge 7. Reordering Commits
+* f4358c8 feat: Add challenge 6. Dropping a Commit
+* 76690c3 chore: Create third and fourth files
+* 098088e feat: Add challenge 5. Advanced Squashing
+* ad46e33 feat: Add challenge 4. Splitting a Commit
+* 9d562a7 Add challenge 3. Keeping History Tidy - Squashing Commits
+* 7e42297 Add challenge 2. Editing Commit History
+* 03fe620 Add challenge 1. Missing File Fix
+* 2f91f5b chore: Add initial test files
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
 
+<br />
 
 
 
