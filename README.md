@@ -975,8 +975,75 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 10. Checking Out Detached HEAD:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline -5
+a9a31fe (HEAD -> main, origin/main)  feat: Add challenge 9. Renaming Branches
+26ea2a2 Merge branch 'ft/branch'
+a3074fd  feat: Add challenge 8. Branch Rebasing
+3297f55 (ft/improved-branch-name)  feat: Add challenge 7. Branch Merging
+cf8ed39  feat: Add challenge 6. Creating a Branch from a Commit
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git checkout 26ea2a2
+Note: switching to '26ea2a2'.
 
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 26ea2a2 Merge branch 'ft/branch'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+HEAD detached at 26ea2a2
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+* (HEAD detached at 26ea2a2)
+  ft/branch
+  ft/improved-branch-name
+  main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls -la
+total 80
+drwxr-xr-x 3 elysee elysee  4096 Sep  9 12:13 .
+drwxr-xr-x 3 elysee elysee  4096 Sep  4 15:46 ..
+drwxr-xr-x 8 elysee elysee  4096 Sep  9 12:13 .git
+-rw-r--r-- 1 elysee elysee 49052 Sep  9 12:13 README.md
+-rw-r--r-- 1 elysee elysee    52 Sep  9 11:12 feature.txt
+-rw-r--r-- 1 elysee elysee  4066 Sep  9 11:12 part-1.md
+-rw-r--r-- 1 elysee elysee  2433 Sep  9 11:12 part-2-local_vs_remote-branches.md
+-rw-r--r-- 1 elysee elysee    50 Sep  9 11:12 readme.txt
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test1.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test2.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test3.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test4.md
+-rw-r--r-- 1 elysee elysee    20 Sep  5 13:36 test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat readme.txt
+This is the introductory content for the project.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git checkout main
+Previous HEAD position was 26ea2a2 Merge branch 'ft/branch'
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+  ft/branch
+  ft/improved-branch-name
+* main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br /><hr /><br />
 
 
 
