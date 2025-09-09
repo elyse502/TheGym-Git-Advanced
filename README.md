@@ -929,6 +929,51 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 9. Renaming Branches:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+  ft/branch
+  ft/new-branch-from-commit
+* main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git switch ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch -m ft/improved-branch-name
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+  ft/branch
+* ft/improved-branch-name
+  main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch -r
+  origin/ft/branch
+  origin/main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch -a
+  ft/branch
+* ft/improved-branch-name
+  main
+  remotes/origin/ft/branch
+  remotes/origin/main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline -3
+3297f55 (HEAD -> ft/improved-branch-name)  feat: Add challenge 7. Branch Merging
+cf8ed39  feat: Add challenge 6. Creating a Branch from a Commit
+3ad0642  feat: Add challenge 5. Branch Deletion
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls -la
+total 80
+drwxr-xr-x 3 elysee elysee  4096 Sep  9 11:17 .
+drwxr-xr-x 3 elysee elysee  4096 Sep  4 15:46 ..
+drwxr-xr-x 8 elysee elysee  4096 Sep  9 11:17 .git
+-rw-r--r-- 1 elysee elysee 46548 Sep  9 11:17 README.md
+-rw-r--r-- 1 elysee elysee    52 Sep  9 11:12 feature.txt
+-rw-r--r-- 1 elysee elysee  4066 Sep  9 11:12 part-1.md
+-rw-r--r-- 1 elysee elysee  2433 Sep  9 11:12 part-2-local_vs_remote-branches.md
+-rw-r--r-- 1 elysee elysee    50 Sep  9 11:12 readme.txt
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test1.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test2.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test3.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test4.md
+-rw-r--r-- 1 elysee elysee    20 Sep  5 13:36 test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
 
 
 
