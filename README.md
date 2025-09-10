@@ -1045,6 +1045,63 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br /><hr /><br />
 
+### Part 3: Advanced Workflows (10+ Challenges)
+> 1. Stashing Changes:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+  ft/branch
+  ft/improved-branch-name
+* main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls
+README.md    part-1.md                           readme.txt  test2.md  test4.md
+feature.txt  part-2-local_vs_remote-branches.md  test1.md    test3.md  test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ vi index.html
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat index.html
+<div class="container">
+        <h1>Hello, world!</h1>
+</div>
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ vi style.css
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat style.css
+.container {
+        display: flex
+}
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add index.html && git stash
+Saved working directory and index state WIP on main: af05a25  feat: Add challenge 10. Checking Out Detached HEAD
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git stash list
+stash@{0}: WIP on main: af05a25 feat: Add challenge 10. Checking Out Detached HEAD
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add style.css && git stash
+Saved working directory and index state WIP on main: af05a25  feat: Add challenge 10. Checking Out Detached HEAD
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git stash list
+stash@{0}: WIP on main: af05a25 feat: Add challenge 10. Checking Out Detached HEAD
+stash@{1}: WIP on main: af05a25 feat: Add challenge 10. Checking Out Detached HEAD
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
 
 
 
