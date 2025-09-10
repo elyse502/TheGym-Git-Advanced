@@ -1103,6 +1103,36 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 2. Retrieving Stashed Changes:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+  ft/branch
+  ft/improved-branch-name
+* main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git stash list
+stash@{0}: WIP on main: af05a25 feat: Add challenge 10. Checking Out Detached HEAD
+stash@{1}: WIP on main: af05a25 feat: Add challenge 10. Checking Out Detached HEAD
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   style.css
+
+Dropped refs/stash@{0} (94c6f47c45d4f8250b25f0561b927037c1f3ba7e)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git stash list
+stash@{0}: WIP on main: af05a25 feat: Add challenge 10. Checking Out Detached HEAD
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
+
 
 
 
