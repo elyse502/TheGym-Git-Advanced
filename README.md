@@ -1597,6 +1597,67 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 10. Pulling Changes from Remote Repositories:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git fetch; git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.10 KiB | 34.00 KiB/s, done.
+From https://github.com/elyse502/TheGym-Git-Advanced
+   43e25b5..7ece66b  main       -> origin/main
+From https://github.com/elyse502/TheGym-Git-Advanced
+ * branch            main       -> FETCH_HEAD
+Updating 43e25b5..7ece66b
+Fast-forward
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log -3 --oneline
+7ece66b (HEAD -> main, origin/main) Update README to include creator information
+43e25b5 feat: Add challenge 9: Pushing Local Work to Remote Repositories
+a788c14 feat: Add challenge 8. Listing and Deleting Tags
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git show 7ece66b
+commit 7ece66b4bf83cbedb2b4d1985bf73c83d5a50c95 (HEAD -> main, origin/main)
+Author: Elysée NIYIBIZI <elyseniyibizi502@gmail.com>
+Date:   Thu Sep 11 11:23:01 2025 +0200
+
+    Update README to include creator information
+
+    Add a footer with creator's name and link.
+
+diff --git a/README.md b/README.md
+index 21af8e7..5df6be9 100644
+--- a/README.md
++++ b/README.md
+@@ -1577,13 +1577,13 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+
+ <br />
+
++<div align="center">
+
++**Made with ❤️ by <i>[Elysée NIYIBIZI](https://elyse502.github.io/Elysee-Portfolio/)</i>**
+
++</div>
+
+-
+-
+-
+-
++<br />
+
+
+
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
+
 <div align="center">
 
 **Made with ❤️ by <i>[Elysée NIYIBIZI](https://elyse502.github.io/Elysee-Portfolio/)</i>**
@@ -1604,6 +1665,5 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 </div>
 
 <br />
-
 
 
