@@ -1521,6 +1521,50 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 7. Working with Tags:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git log --oneline -3
+b7d1dd9 (HEAD -> main, origin/main) feat: Add challenge 6. Ignoring Files/Directories
+e6f2430 feat: Add challenge 6. Ignoring Files/Directories
+01c9402 Add .gitignore file
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git tag v1.0
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git tag
+v1.0
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git show v1.0
+commit b7d1dd9c4807ba851a76dea2537bc0e44e773413 (HEAD -> main, tag: v1.0, origin/main)
+Author: elyse502 <elyseniyibizi502@gmail.com>
+Date:   Thu Sep 11 11:51:52 2025 +0300
+
+    feat: Add challenge 6. Ignoring Files/Directories
+
+diff --git a/README.md b/README.md
+index 314c0a8..70468e9 100644
+--- a/README.md
++++ b/README.md
+@@ -1500,6 +1500,18 @@ Untracked files:
+         .gitignore
+
+ nothing added to commit but untracked files present (use "git add" to track)
++elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status --ignored
++On branch main
++Your branch is up to date with 'origin/main'.
++
++Ignored files:
++  (use "git add -f <file>..." to include in what will be committed)
++        app.log
++        error.log
++        tmp/
++
++nothing to commit, working tree clean
++elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add .gitignore && git commit -m "Add .gitignore file"
+ [main 01c9402] Add .gitignore file
+  1 file changed, 3 insertions(+)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
+
 
 
 
