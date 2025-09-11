@@ -1444,6 +1444,71 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 6. Ignoring Files/Directories:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls -la
+total 108
+drwxr-xr-x 3 elysee elysee  4096 Sep 11 11:31 .
+drwxr-xr-x 3 elysee elysee  4096 Sep  4 15:46 ..
+drwxr-xr-x 8 elysee elysee  4096 Sep 11 11:35 .git
+-rw-r--r-- 1 elysee elysee 73083 Sep 11 11:33 README.md
+-rw-r--r-- 1 elysee elysee   155 Sep 11 11:25 conflict-file.txt
+-rw-r--r-- 1 elysee elysee    52 Sep  9 11:12 feature.txt
+-rw-r--r-- 1 elysee elysee  4066 Sep  9 11:12 part-1.md
+-rw-r--r-- 1 elysee elysee  2433 Sep  9 11:12 part-2-local_vs_remote-branches.md
+-rw-r--r-- 1 elysee elysee    50 Sep  9 11:12 readme.txt
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test1.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test2.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test3.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test4.md
+-rw-r--r-- 1 elysee elysee    20 Sep  5 13:36 test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ touch .gitignore
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ ls -la
+total 108
+drwxr-xr-x 3 elysee elysee  4096 Sep 11 11:39 .
+drwxr-xr-x 3 elysee elysee  4096 Sep  4 15:46 ..
+drwxr-xr-x 8 elysee elysee  4096 Sep 11 11:35 .git
+-rw-r--r-- 1 elysee elysee     0 Sep 11 11:39 .gitignore
+-rw-r--r-- 1 elysee elysee 73083 Sep 11 11:33 README.md
+-rw-r--r-- 1 elysee elysee   155 Sep 11 11:25 conflict-file.txt
+-rw-r--r-- 1 elysee elysee    52 Sep  9 11:12 feature.txt
+-rw-r--r-- 1 elysee elysee  4066 Sep  9 11:12 part-1.md
+-rw-r--r-- 1 elysee elysee  2433 Sep  9 11:12 part-2-local_vs_remote-branches.md
+-rw-r--r-- 1 elysee elysee    50 Sep  9 11:12 readme.txt
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test1.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test2.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test3.md
+-rw-r--r-- 1 elysee elysee     0 Sep  5 13:23 test4.md
+-rw-r--r-- 1 elysee elysee    20 Sep  5 13:36 test5.md
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ echo "/tmp" >> .gitignore
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ echo "*.log" >> .gitignore
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ echo "node_modules/" >> .gitignore
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat .gitignore
+/tmp
+*.log
+node_modules/
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ mkdir tmp
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ touch tmp/file1.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ touch app.log
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ touch error.log
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add .gitignore && git commit -m "Add .gitignore file"
+[main 01c9402] Add .gitignore file
+ 1 file changed, 3 insertions(+)
+ create mode 100644 .gitignore
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
+
 
 
 
