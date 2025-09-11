@@ -1224,6 +1224,171 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+> 4. Resolving Merge Conflicts with a Merge Tool:
+```console
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git branch
+  ft/branch
+  ft/conflict-branch
+  ft/improved-branch-name
+* main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git switch ft/conflict-branch
+Switched to branch 'ft/conflict-branch'
+Your branch is up to date with 'origin/ft/conflict-branch'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ echo "This is the feature branch version" >> conflict-file.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch ft/conflict-branch
+Your branch is up to date with 'origin/ft/conflict-branch'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   conflict-file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat conflict-file.txt
+This is the feature branch version
+This is the feature branch version
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add conflict-file.txt && git commit -m "Update conflict file on feature branch"
+[ft/conflict-branch d81280e] Update conflict file on feature branch
+ 1 file changed, 1 insertion(+)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ echo "This is the main branch version" >> conflict-file.txt
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   conflict-file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat conflict-file.txt
+This is the resolved version combining both changes
+This is the main branch version
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add conflict-file.txt && git commit -m "Update conflict file on main"
+[main f28b0d2] Update conflict file on main
+ 1 file changed, 1 insertion(+)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git merge ft/conflict-branch
+Auto-merging conflict-file.txt
+CONFLICT (content): Merge conflict in conflict-file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat conflict-file.txt
+<<<<<<< HEAD
+This is the resolved version combining both changes
+This is the main branch version
+=======
+This is the feature branch version
+This is the feature branch version
+>>>>>>> ft/conflict-branch
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   conflict-file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiff
+Merging:
+conflict-file.txt
+
+Normal merge conflict for 'conflict-file.txt':
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (bc): ^C
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git config --global merge.tool vscode
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git config --global mergetool.vscode.cmd 'code --wait $MERGED'
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git mergetool
+Merging:
+conflict-file.txt
+
+Normal merge conflict for 'conflict-file.txt':
+  {local}: modified file
+  {remote}: modified file
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   conflict-file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        conflict-file.txt.orig
+
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat conflict-file.txt
+This is the resolved version combining both changes
+This is the main branch version
+
+This is the feature branch version
+This is the feature branch version
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add conflict-file.txt && git commit -m "Resolved conflicts using VS Code mergetool"
+[main 8ffb793] Resolved conflicts using VS Code mergetool
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        conflict-file.txt.orig
+
+nothing added to commit but untracked files present (use "git add" to track)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ cat conflict-file.txt.orig
+<<<<<<< HEAD
+This is the resolved version combining both changes
+This is the main branch version
+=======
+This is the feature branch version
+This is the feature branch version
+>>>>>>> ft/conflict-branch
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git clean -d -f
+Removing conflict-file.txt.orig
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git push origin main
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 915 bytes | 61.00 KiB/s, done.
+Total 9 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/elyse502/TheGym-Git-Advanced
+   5ca66b2..8ffb793  main -> main
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
+```
+
+<br />
+
 
 
 
