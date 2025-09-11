@@ -1656,7 +1656,7 @@ index 21af8e7..5df6be9 100644
 elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 ```
 
-<br />
+<br /><hr /><br />
 
 <div align="center">
 
