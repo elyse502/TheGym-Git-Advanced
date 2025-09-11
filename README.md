@@ -1500,6 +1500,18 @@ Untracked files:
         .gitignore
 
 nothing added to commit but untracked files present (use "git add" to track)
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git status --ignored
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Ignored files:
+  (use "git add -f <file>..." to include in what will be committed)
+        app.log
+        error.log
+        tmp/
+
+nothing to commit, working tree clean
+elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$ git add .gitignore && git commit -m "Add .gitignore file"
 [main 01c9402] Add .gitignore file
  1 file changed, 3 insertions(+)
