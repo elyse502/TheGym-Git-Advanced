@@ -1577,13 +1577,13 @@ elysee@DESKTOP-73EL1TL:~/the-gym-uok/3-sprint/advanced-git/TheGym-Git-Advanced$
 
 <br />
 
+<div align="center">
 
+**Made with ❤️ by <i>[Elysée NIYIBIZI](https://elyse502.github.io/Elysee-Portfolio/)</i>**
 
+</div>
 
-
-
-
-
+<br />
 
 
 
